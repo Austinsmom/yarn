@@ -58,4 +58,4 @@ before_install:
 os:
   - linux
 
-script: travis_retry yarn $TEST_TYPE
+script: travis_retry node --max_old_space_size=4096 ./bin/yarn.js $TEST_TYPE
