@@ -96,7 +96,7 @@
     "prettier": "node scripts/prettier.js write",
     "release-branch": "./scripts/release-branch.sh",
     "test": "yarn lint && yarn test-only",
-    "test-ci": "yarn test-only",
+    "test-ci": "yarn build && yarn test-only",
     "test-only": "jest --coverage --verbose",
     "watch": "gulp watch"
   },
