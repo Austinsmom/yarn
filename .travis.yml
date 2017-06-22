@@ -54,9 +54,8 @@ before_install:
       mkdir -p $TMPDIR;
       mount -t hfs -o nobrowse $RAMDISK $TMPDIR;
     fi
-  - yarn build
 
 os:
   - linux
 
-script: travis_retry node --max_old_space_size=4096 ./bin/yarn.js $TEST_TYPE
+script: travis_retry node --max_old_space_size=4096 `which yarn`.js $TEST_TYPE
