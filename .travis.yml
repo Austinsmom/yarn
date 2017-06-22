@@ -54,6 +54,7 @@ before_install:
       mkdir -p $TMPDIR;
       mount -t hfs -o nobrowse $RAMDISK $TMPDIR;
     fi
+  - yarn build
 
 os:
   - linux
